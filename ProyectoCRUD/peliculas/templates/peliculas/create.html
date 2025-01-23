@@ -1,0 +1,32 @@
+{% extends "peliculas/base.html" %}
+{% load static %}
+
+{% block titulo %} Añadir película {% endblock %}
+
+{% block contenido %}
+
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+<h1 class="text-center text-light mt-2">Añade una película</h1>
+
+<form method="post">
+
+    {% csrf_token %}
+    
+    <div class="d-flex flex-column">
+        {{ form.as_p }}
+    </div>
+    {% if form.errors %}
+    <ul>
+        {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+                <li>{{ field }}: {{ error }}</li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+<button type="submit" class="btn btn-primary">Agregar</button>
+<a href="{% url 'listar-peliculas' %}" class="btn btn-secondary">Regresar al menú principal</a>
+</form>
+{% endblock %}

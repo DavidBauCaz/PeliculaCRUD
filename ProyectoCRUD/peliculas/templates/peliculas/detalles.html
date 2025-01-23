@@ -1,0 +1,33 @@
+{% extends "peliculas/base.html" %}
+{% load static %}
+
+{% block titulo %} Detalles de la película {% endblock %}
+
+{% block contenido %}
+
+<link rel="stylesheet" href="{% static 'css/detalles.css' %}">
+
+<h1 class="text-center text-light mt-4">Detalles de la película</h1>
+
+<div class="d-flex justify-content-center mt-4">
+    <div class="poster-container">
+        {% if pelicula.poster %}
+        <img src="{{ pelicula.poster }}" alt="" class="img-fluid poster">
+        {% else %}
+        <p>No hay imagen</p>
+        {% endif %}
+
+    </div>
+    <div class="detalles">
+        <p><strong>Director:</strong> {{ pelicula.director }}</p>
+        <p><strong>Descripción:</strong> {{ pelicula.descripcion }}</p>
+        <p><strong>Actores Principales:</strong> {{ pelicula.actores_principales }}</p>
+        <p><strong>Fecha de Estreno:</strong> {{ pelicula.fecha_salida }}</p>
+        <p><strong>Género:</strong> {{ pelicula.genero }}</p>
+        <p><strong>Clasificación:</strong> {{ pelicula.clasificacion }}</p>
+        <p><strong>Idiomas:</strong> {{ pelicula.idiomas }}</p>
+        <p><strong>Duración:</strong> {{ pelicula.duracion }} minutos</p>
+        <p><strong>Estrellas:</strong> {{ pelicula.estrellas }}/5</p>
+    </div>
+</div>
+{% endblock %}

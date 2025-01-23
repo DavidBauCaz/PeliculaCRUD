@@ -1,0 +1,12 @@
+p{
+    color: white;
+}
+
+.poster {
+    max-width: 300px;
+    height: auto;
+}
+
+.poster-container{
+    margin-right: 2em;
+}

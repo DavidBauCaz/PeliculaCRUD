@@ -1,0 +1,15 @@
+{% extends "peliculas/base.html" %}
+
+{% block titulo %} Todas las películas {% endblock %}
+
+{% block contenido %}
+
+
+<h1 class="text-center text-light mt-2">Tu lista de películas</h1>
+<a href="{% url 'create-pelicula' %}">Añadir película</a>
+<ul>
+    {% for pelicula in peliculas %}
+    <li class="text-light"><a href="{% url 'read-pelicula' pelicula.id %}">{{ pelicula.titulo }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

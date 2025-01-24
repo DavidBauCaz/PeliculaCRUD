@@ -6,13 +6,11 @@
 
 
 <h1 class="text-center text-light mt-2">Tu lista de películas</h1>
-<a href="{% url 'create-pelicula' %}">Añadir película</a>
-<ul>
+<a href="{% url 'create-pelicula' %}" class="btn btn-lg btn-success m-4">Añadir película</a>
+<ul class="item-pelicula m-1">
     {% for pelicula in peliculas %}
-    <li class="text-light">
-        <a href="{% url 'read-pelicula' pelicula.id %}">{{ pelicula.titulo }}</a>
-        <a href="{% url 'update-pelicula' pelicula.id %}" class="btn btn-sm btn-primary">Editar</a>
-        <a href="{% url 'delete-pelicula' pelicula.id %}" class="btn btn-sm btn-danger">Eliminar</a>
+    <li class="text-light m-2 underline">
+        <a href="{% url 'read-pelicula' pelicula.id %}" class="fs-4 mr-2">{{ pelicula.titulo }}</a><a href="{% url 'update-pelicula' pelicula.id %}" class="btn btn-sm btn-primary mr-2 ml-2">Editar</a><a href="{% url 'delete-pelicula' pelicula.id %}" class="btn btn-sm btn-danger">Eliminar</a>
     </li>
     {% endfor %}
 </ul>

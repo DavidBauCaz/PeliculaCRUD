@@ -1,0 +1,147 @@
+
+## Template
+
+Titulo{
+
+}
+Director{
+
+}
+Descripcion{
+
+}
+Poster{
+
+}
+ActoresPrincipales{
+
+}
+FechaSalida{
+
+}
+Genero{
+
+}
+Clasificacion{
+
+}
+Idiomas{
+
+}
+Duracion{
+
+}
+Estrellas{
+
+}
+
+
+################## Blade
+
+Titulo{
+    Blade, Cazador de Vampiros
+}
+Director{
+    Stephen Norrington
+}
+Descripcion{
+    Blade es mitad humano, mitad vampiro, y utiliza sus habilidades para cazar a los vampiros que amenazan a la humanidad. Enfrenta una peligrosa conspiración liderada por Deacon Frost, un vampiro que quiere dominar el mundo.
+}
+Poster{
+    https://example.com/blade-poster.jpg
+}
+ActoresPrincipales{
+    Wesley Snipes, Stephen Dorff, Kris Kristofferson, N'Bushe Wright
+}
+FechaSalida{
+    1998-08-21
+}
+Genero{
+    Acción, Fantasía, Terror
+}
+Clasificacion{
+    R
+}
+Idiomas{
+    Inglés, Español
+}
+Duracion{
+    120
+}
+Estrellas{
+    4
+}
+
+
+################## El señor de los anillos
+
+Titulo{
+    El Señor de los Anillos: La Comunidad del Anillo
+}
+Director{
+    Peter Jackson
+}
+Descripcion{
+    Un joven hobbit, Frodo, recibe el Anillo Único y emprende un peligroso viaje para destruirlo en los fuegos del Monte del Destino. Es acompañado por una valiente comunidad de amigos y guerreros.
+}
+Poster{
+    https://m.media-amazon.com/images/I/71FKDTzfGfL._AC_UF894,1000_QL80_.jpg
+}
+ActoresPrincipales{
+    Elijah Wood, Ian McKellen, Viggo Mortensen, Sean Astin
+}
+FechaSalida{
+    2001-12-19
+}
+Genero{
+    Fantasía, Aventura, Drama
+}
+Clasificacion{
+    PG-13
+}
+Idiomas{
+    Inglés, Español
+}
+Duracion{
+    178
+}
+Estrellas{
+    5
+}
+
+
+################Matrix
+
+Titulo{
+    Matrix
+}
+Director{
+    Lana Wachowski, Lilly Wachowski
+}
+Descripcion{
+    Un hacker llamado Neo descubre la verdad detrás de su realidad y lidera una revolución contra las máquinas que han esclavizado a la humanidad.
+}
+Poster{
+   https://m.media-amazon.com/images/I/51ISve-1n1S.jpg
+}
+ActoresPrincipales{
+    Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving
+}
+FechaSalida{
+    1999-03-31
+}
+Genero{
+    Ciencia ficción, Acción
+}
+Clasificacion{
+    R
+}
+Idiomas{
+    Inglés, Español, Francés
+}
+Duracion{
+    136
+}
+Estrellas{
+    5
+}

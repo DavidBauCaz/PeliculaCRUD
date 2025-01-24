@@ -6,9 +6,9 @@ from django.urls import reverse_lazy
 
 #vista para mostrar las películas
 class ListarPeliculas(ListView):
-    model = Pelicula
-    template_name = "peliculas/read.html"
-    context_object_name = "peliculas"
+    model = Pelicula # Modelo al que vamos a acceder en el template
+    template_name = "peliculas/read.html" # template que se va a renderizar para mostrar la lista de los datos
+    context_object_name = "peliculas"  # contexto que le vamos a pasar al template como variable llamada 'peliculas' y con el que accedemos a los datos de la base
     
 #vista para ver más acerca de la película
 class DetallesPelicula(DetailView):
@@ -21,7 +21,7 @@ class CrearPelicula(CreateView):
     template_name = 'peliculas/create.html'
     fields = ['titulo', 'director', 'descripcion', 'poster', 'actores_principales', 'fecha_salida', 'genero', 'clasificacion', 'idiomas',
               'duracion', 'estrellas']
-    success_url = reverse_lazy('listar-peliculas')
+    success_url = reverse_lazy('listar-peliculas') # url al que vamos a redirigir al usuario cuando termine de agregar una película
     
 class ActualizarPelicula(UpdateView):
     model = Pelicula

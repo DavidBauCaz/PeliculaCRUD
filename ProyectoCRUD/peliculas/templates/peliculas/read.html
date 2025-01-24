@@ -7,6 +7,7 @@
 
 <h1 class="text-center text-light mt-2">Tu lista de películas</h1>
 <a href="{% url 'create-pelicula' %}" class="btn btn-lg btn-success m-4">Añadir película</a>
+<!-- Con el contexto pasado como peliculas podemos acceder a las peliculas de la base de datos, las vamos a mostrar como una lista-->
 <ul class="item-pelicula m-1">
     {% for pelicula in peliculas %}
     <li class="text-light m-2 underline">

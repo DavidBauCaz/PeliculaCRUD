@@ -1,0 +1,27 @@
+{% extends "peliculas/base.html"%}
+{% load static %}
+
+{% block titulo %} Actualizar datos {% endblock %}
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+<h1 class="text-light">Actualizar datos de la película</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    <a href="{% url 'listar-peliculas' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+
+
+{% if form.errors %}
+<ul>
+    {% for field, errors in form.errors.items %}
+        {% for error in errors %}
+            <li>{{ field }}: {{ error }}</li>
+        {% endfor %}
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

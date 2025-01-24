@@ -9,7 +9,11 @@
 <a href="{% url 'create-pelicula' %}">Añadir película</a>
 <ul>
     {% for pelicula in peliculas %}
-    <li class="text-light"><a href="{% url 'read-pelicula' pelicula.id %}">{{ pelicula.titulo }}</a></li>
+    <li class="text-light">
+        <a href="{% url 'read-pelicula' pelicula.id %}">{{ pelicula.titulo }}</a>
+        <a href="{% url 'update-pelicula' pelicula.id %}" class="btn btn-sm btn-primary">Editar</a>
+        <a href="{% url 'delete-pelicula' pelicula.id %}" class="btn btn-sm btn-danger">Eliminar</a>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}

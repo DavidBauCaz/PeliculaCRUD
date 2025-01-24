@@ -25,11 +25,12 @@ class CrearPelicula(CreateView):
     
 class ActualizarPelicula(UpdateView):
     model = Pelicula
-    template_name = 'templates/update.html'
+    template_name = 'peliculas/update.html'
     fields = ['titulo', 'director', 'descripcion', 'poster', 'actores_principales', 'fecha_salida', 'genero', 'clasificacion', 'idiomas',
               'duracion', 'estrellas']
-    success_url = reverse_lazy('listarPeliculas')
+    success_url = reverse_lazy('listar-peliculas')
     
 class EliminarPelicula(DeleteView):
     model = Pelicula
-    template_name = 'templates/delete.html'
+    template_name = 'peliculas/delete.html'
+    success_url = reverse_lazy('listar-peliculas')

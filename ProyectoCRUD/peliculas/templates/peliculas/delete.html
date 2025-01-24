@@ -1,0 +1,16 @@
+{% extends "peliculas/base.html"%}
+{% load static %}
+
+{% block titulo %} Borrar película {% endblock %}
+
+{% block contenido %}
+<div class="container py-4">
+    <h1 class="text-center text-danger">¿Estás seguro de que quieres eliminar esta película?</h1>
+    <h2 class="text-center text-light">{{ object.titulo }}</h2>
+    <form method="post" class="text-center">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a href="{% url 'listar-peliculas' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}
